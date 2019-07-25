@@ -15,7 +15,7 @@ header,
 }
 
 .top-nav-collapse {
-  background-color: #78909c !important;
+  background-color: rgb(63, 22, 128) !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -24,7 +24,7 @@ header,
 
 @media (max-width: 991px) {
   .navbar:not(.top-nav-collapse) {
-    background: #78909c !important;
+    background: rgb(63, 22, 128) !important;
   }
 }
 
@@ -40,3 +40,9 @@ h5 {
   border-top: 3px solid #fff;
   width: 80px;
 }
+
+.navbar.scrolled {
+  background-color: rgb(63, 22, 128) !important;
+  transition: background-color 200ms linear;
+}
+

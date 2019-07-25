@@ -17,47 +17,94 @@
     <title>Crystal Conroy</title>
           <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
-       
+    <script type='text/javascript' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <script>
+
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".navbar");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+
+        $(document).ready(function() {
+                $('a[href*=\\#]').bind('click', function(e) {
+                        e.preventDefault(); // prevent hard jump, the default behavior
+
+                        var target = $(this).attr("href"); // Set the target as variable
+
+                        // perform animated scrolling by getting top-position of target-element and set it as scroll target
+                        $('html, body').stop().animate({
+                                scrollTop: $(target).offset().top
+                        }, 600, function() {
+                                location.hash = target; //attach the hash (#jumptarget) to the pageurl
+                        });
+
+                        return false;
+                });
+        });
+
+        $(window).scroll(function() {  
+            var scrollDistance = $(window).scrollTop();
+
+                // Show/hide menu on scroll
+                //if (scrollDistance >= 850) {
+                //		$('nav').fadeIn("fast");
+                //} else {
+                //		$('nav').fadeOut("fast");
+                //}
+            
+                // Assign active class to nav links while scolling
+                $('.page-section').each(function(i) {
+                        if ($(this).position().top <= scrollDistance+200) {
+                                $('.navigation a').parent().removeClass('active');
+                                $('.navigation a').eq(i).parent().addClass('active');
+                        }
+                });
+        });
+
+    </script>
+ 
   </head>
     <body>
 
-        <header>
           <!--Navbar-->
-          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+          <nav id="mainNav" class="navigation navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
-              <a class="navbar-brand" href="#"><strong>MDB</strong></a>
+              <!-- <a class="navbar-brand" href="#"><strong>MDB</strong></a> -->
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#home">Home </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Experience</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Resume</a>
+                      <a class="nav-link" href="#about">About Me</a>
                     </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Me</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Resume.pdf">Resume</a>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Me</a>
                     </li>
                 </ul>
-                <form class="form-inline">
-                  <div class="md-form my-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                  </div>
-                </form>
+                <a href="https://github.com/crystalsc"><img src="./images/github.svg" style="padding-right: 1em" width="50" height="50"></a>
+                <a href="https://www.linkedin.com/in/crystal-conroy-252815182/"><img src="./images/linkedin.svg" width="40" height="40"></a>
+
               </div>
             </div>
           </nav>
           <!-- Navbar -->
           <!-- Full Page Intro -->
-          <div  class="view" style="background-image: url('./city.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+          <div id="home" class="page-section view" style="background-image: url('./images/city.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-black-light">
             <div class="align-items-center" style="margin-top: 5em">
@@ -83,10 +130,161 @@
         </div>
           </div>
           <!-- Full Page Intro -->
-        </header>
+        <main class="mt-5 pt-5">
+            <div class="container">
+                <section id="about"class="page-section pt-5">
+    
+                    <!-- Heading & Description -->
+                    <div class="wow fadeIn">
+                      
+                        <!--Section heading-->
+                        <h2 class="h1 text-center mb-5">About Me</h2>
+                        <!--Section description-->
+                        <p class="text-center">Hi there! I'm a senior at the University of Delaware studying Computer Science with a concentration in internet systems and a minor in electrical and computer engineering. 
+                          I have experience programming in many different languages including C, C++, Java, Python, and JavaScript. 
+                          Over the course of my college career I have also done research into cloud computing, and worked at several different internships.
+                          My main interests include web application development and computer science education.</p>
+                    </div>
+
+                    <hr class="mb-5">
+                </section>
+                <section class="page-section" id="projects">
+                    <!-- Heading & Description -->
+                    <div >
+                    <!--Grid row-->
+                    <h2 class="h1 text-center mb-5">Projects</h2>
+                    <div class="row wow fadeIn">
+                        
+                        <!--Grid column-->
+                        <div class="col-lg-5 col-xl-4 mb-4">
+                            <!--Featured image-->
+                            <div class="view overlay rounded z-depth-1-half">
+                                <div class="view overlay">
+                                    <div class="view overlay rounded z-depth-1">
+                                      <img src="./images/Capture.JPG" class="img-fluid">
+                                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXTThxoywNQ" allowfullscreen></iframe> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+                            <h3 class="mb-3 font-weight-bold dark-grey-text">
+                                <strong>UD Clone</strong>
+                            </h3>
+                            <p class="grey-text">For CISC474, advanced software engineering, in a group of six.</p>
+                            <p>
+                                <strong>A web app that allows users to create and edit pages about different UD topics like class, professors, etc. 
+                                    The front end uses Angular while the backend uses Node.js and MongoDB.</strong>
+                            </p>
+                            <a href="https://github.com/vgutta/Wikipedia-Clone" target="_blank" class="btn btn-primary btn-md">Check out the code
+                                <i class="fas fa-play ml-2"></i>
+                            </a>
+                        </div>
+                        <!--Grid column-->
+    
+                    </div>
+                    <!--Grid row-->
+    
+                    <hr class="mb-5">
+    
+                    <!--Grid row-->
+                    <div class="row mt-3 wow fadeIn">
+    
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-lg-5 col-xl-4 mb-4">
+                            <!--Featured image-->
+                            <div class="view overlay rounded z-depth-1-half">
+                                <div class="view overlay">
+                                    <div class="view overlay rounded z-depth-1">
+                                      <img src="./images/game.png" class="img-fluid">
+                                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXTThxoywNQ" allowfullscreen></iframe> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+                            <h3 class="mb-3 font-weight-bold dark-grey-text">
+                                <strong>Our Awesome Car Game</strong>
+                            </h3>
+                            <p class="grey-text">For CISC474, advanced software engineering, in a group of six.</p>
+                            <p>
+                                <strong>A browser game written in JavaScript and HTML. </strong>
+                            </p>
+                            <a href="./public/index.html" target="_blank" class="btn btn-primary btn-md">Play it here
+                                <i class="fas fa-play ml-2"></i>
+                            </a>
+                        </div>
+                        <!--Grid column-->
+                        
+                </div>
+    
+                    </div>
+                    <!--Grid row-->
+    
+                    <hr class="mb-5">
+    
+                    <!--Grid row-->
+                    <div class="row wow fadeIn">
+    
+                        <!--Grid column-->
+                        <div class="col-lg-5 col-xl-4 mb-4">
+                            <!--Featured image-->
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="./images/meggy.jpg" class="img-fluid" alt="">
+                                
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+                            <h3 class="mb-3 font-weight-bold dark-grey-text">
+                                <strong>Meggy Java Compiler</strong>
+                            </h3>
+                            <p class="grey-text">For CISC471, compiler design.</p>
+                            <p>
+                                <strong>A compiler for MeggyJava, a subset of the Java language. This project included scanning and parsing tokens, as well as creating an abstract syntax tree to do type checking and a visitor to generate assembly code.</strong>
+                            </p>
+                            <a href="https://www.cs.colostate.edu/~cs453/yr2013/MeggyJavaInfo/meggy-java-grammar.html" target="_blank" class="btn btn-primary btn-md">Info on the project
+                                <i class="fas fa-play ml-2"></i>
+                            </a>
+                        </div>
+                        <!--Grid column-->
+    
+                    </div>
+                    <!--Grid row-->
+    
+                    <hr class="mb-5">
+    
+                    
+    
+                </section>
+                <!--Section: Cards-->
+    
+            </div>
+        </main>
+        <!--Main layout-->
+    
+        <!--Footer-->
+        <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+  
+    
+            <!--Copyright-->
+            <div class="footer-copyright py-3">
+                © 2019 Copyright: Me, Myself, and I 
+            </div>
+            <!--/.Copyright-->
+    
+        </footer>
         <!-- Main navigation -->
 
     </body>
-    <!-- JQuery -->
 
 </html>
