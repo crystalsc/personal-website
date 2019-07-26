@@ -19,14 +19,14 @@
     <link href="cover.css" rel="stylesheet">
     <script type='text/javascript' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
     <script>
-
+      // change navbar color when scrolling
         $(function () {
             $(document).scroll(function () {
                 var $nav = $(".navbar");
                 $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
             });
         });
-
+        // smooth scroll
         $(document).ready(function() {
                 $('a[href*=\\#]').bind('click', function(e) {
                         e.preventDefault(); // prevent hard jump, the default behavior
@@ -43,7 +43,7 @@
                         return false;
                 });
         });
-
+        // change active tab while scrolling
         $(window).scroll(function() {  
             var scrollDistance = $(window).scrollTop();
 
@@ -262,14 +262,41 @@
                     <!--Grid row-->
     
                     <hr class="mb-5">
-    
+                    
                     
     
                 </section>
+              </div>
+            </main>
+
+                <div style="background-image: url('./images/sunset_small.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                  <!-- Mask & flexbox options-->
+                  <div class="mask rgba-black-light">
+                      <div class="align-items-center" style="margin-top: 5em">
+                        <!-- Content -->
+                        <div class="container">
+                          <!--Grid row-->
+                          <div class="row">
+                            <!--Grid column-->
+                            <div class="col-md-12 mb-4 white-text text-center">
+                              <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><strong>Crystal Conroy</strong></h1>
+                              <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+                              <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Computer Science Student</strong></h5>
+                              <!-- <a href="Resume.pdf" class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">resume </a>
+                              <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a> -->
+                            </div>
+                            <!--Grid column-->
+                          </div>
+                          <!--Grid row-->
+                        </div>
+                        <!-- Content -->
+                      </div>
+                      <!-- Mask & flexbox options-->
+                  </div>
+                </div>
                 <!--Section: Cards-->
     
-            </div>
-        </main>
+            
         <!--Main layout-->
     
         <!--Footer-->
