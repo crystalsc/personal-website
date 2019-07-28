@@ -4,9 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link rel='icon' href='UD.png'  >
 
+    
     <!-- Bootstrap CSS -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -17,61 +16,25 @@
     <title>Crystal Conroy</title>
           <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
-    <script type='text/javascript' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-    <script>
-      // change navbar color when scrolling
-        $(function () {
-            $(document).scroll(function () {
-                var $nav = $(".navbar");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            });
-        });
-        // smooth scroll
-        $(document).ready(function() {
-                $('a[href*=\\#]').bind('click', function(e) {
-                        e.preventDefault(); // prevent hard jump, the default behavior
-
-                        var target = $(this).attr("href"); // Set the target as variable
-
-                        // perform animated scrolling by getting top-position of target-element and set it as scroll target
-                        $('html, body').stop().animate({
-                                scrollTop: $(target).offset().top
-                        }, 600, function() {
-                                location.hash = target; //attach the hash (#jumptarget) to the pageurl
-                        });
-
-                        return false;
-                });
-        });
-        // change active tab while scrolling
-        $(window).scroll(function() {  
-            var scrollDistance = $(window).scrollTop();
-
-                // Show/hide menu on scroll
-                //if (scrollDistance >= 850) {
-                //		$('nav').fadeIn("fast");
-                //} else {
-                //		$('nav').fadeOut("fast");
-                //}
-            
-                // Assign active class to nav links while scolling
-                $('.page-section').each(function(i) {
-                        if ($(this).position().top <= scrollDistance+200) {
-                                $('.navigation a').parent().removeClass('active');
-                                $('.navigation a').eq(i).parent().addClass('active');
-                        }
-                });
-        });
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+    <script type="text/javascript">
+      // Animations initialization
+      new WOW().init();
+  
     </script>
+    <script src="js.js"></script>
  
   </head>
     <body>
-
+        
+        
           <!--Navbar-->
-          <nav id="mainNav" class="navigation navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+          <nav id="mainNav" class="navigation navbar navbar-expand-sm navbar-dark fixed-top scrolling-navbar">
             <div class="container">
-              <!-- <a class="navbar-brand" href="#"><strong>MDB</strong></a> -->
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -92,12 +55,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="Resume.pdf">Resume</a>
                     </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact Me</a>
-                    </li>
+                  
                 </ul>
-                <a href="https://github.com/crystalsc"><img src="./images/github.svg" style="padding-right: 1em" width="50" height="50"></a>
-                <a href="https://www.linkedin.com/in/crystal-conroy-252815182/"><img src="./images/linkedin.svg" width="40" height="40"></a>
+                <a href="https://github.com/crystalsc"><i style="color: white" class="fab fa-github mr-3"></i></a>
+                  <a href="https://www.linkedin.com/in/crystal-conroy-252815182/"><i style="color: white" class="fab fa-linkedin mr-3"></i></a>
 
               </div>
             </div>
@@ -130,9 +91,9 @@
         </div>
           </div>
           <!-- Full Page Intro -->
-        <main class="mt-5 pt-5">
+        <main class="mt-5 ">
             <div class="container">
-                <section id="about"class="page-section pt-5">
+                <section id="about"class="page-section">
     
                     <!-- Heading & Description -->
                     <div class="wow fadeIn">
@@ -143,28 +104,30 @@
                         <p class="text-center">Hi there! I'm a senior at the University of Delaware studying Computer Science with a concentration in internet systems and a minor in electrical and computer engineering. 
                           I have experience programming in many different languages including C, C++, Java, Python, and JavaScript. 
                           Over the course of my college career I have also done research into cloud computing, and worked at several different internships.
-                          My main interests include web application development and computer science education.</p>
+                          My main interest is in web application development.</p>
                     </div>
 
-                    <hr class="mb-5">
                 </section>
+            </div>
+        </main> 
+        <div class="wow fadeIn" style="background-image: url('./images/cartoon.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;height:50%" class="jumbotron p-4 p-md-5 text-white rounded">
+          <div class="col-md-6 px-0"></div>
+
+        </div>
+        <main class="mt-5">
+            <div class="container">
                 <section class="page-section" id="projects">
                     <!-- Heading & Description -->
-                    <div >
                     <!--Grid row-->
-                    <h2 class="h1 text-center mb-5">Projects</h2>
+                    <h2 class="h1 text-center mb-5 wow fadeIn">Projects</h2>
                     <div class="row wow fadeIn">
                         
                         <!--Grid column-->
                         <div class="col-lg-5 col-xl-4 mb-4">
                             <!--Featured image-->
                             <div class="view overlay rounded z-depth-1-half">
-                                <div class="view overlay">
-                                    <div class="view overlay rounded z-depth-1">
                                       <img src="./images/Capture.JPG" class="img-fluid">
-                                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXTThxoywNQ" allowfullscreen></iframe> -->
-                                    </div>
-                                </div>
+                                    
                             </div>
                         </div>
                         <!--Grid column-->
@@ -188,7 +151,7 @@
                     </div>
                     <!--Grid row-->
     
-                    <hr class="mb-5">
+                    <hr class="mb-5 wow fadeIn">
     
                     <!--Grid row-->
                     <div class="row mt-3 wow fadeIn">
@@ -225,10 +188,10 @@
                         
                 </div>
     
-                    </div>
+                    
                     <!--Grid row-->
     
-                    <hr class="mb-5">
+                    <hr class="mb-5 wow fadeIn">
     
                     <!--Grid row-->
                     <div class="row wow fadeIn">
@@ -259,53 +222,79 @@
                         <!--Grid column-->
     
                     </div>
+                  
                     <!--Grid row-->
-    
-                    <hr class="mb-5">
-                    
-                    
-    
                 </section>
               </div>
             </main>
+            <div class="wow fadeIn" style="background-image: url('./images/night.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;height:50%" class="jumbotron p-4 p-md-5 text-white rounded">
+              <div class="col-md-6 px-0"></div>
 
-                <div style="background-image: url('./images/sunset_small.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-                  <!-- Mask & flexbox options-->
-                  <div class="mask rgba-black-light">
-                      <div class="align-items-center" style="margin-top: 5em">
-                        <!-- Content -->
-                        <div class="container">
-                          <!--Grid row-->
-                          <div class="row">
-                            <!--Grid column-->
-                            <div class="col-md-12 mb-4 white-text text-center">
-                              <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><strong>Crystal Conroy</strong></h1>
-                              <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
-                              <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Computer Science Student</strong></h5>
-                              <!-- <a href="Resume.pdf" class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">resume </a>
-                              <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a> -->
-                            </div>
-                            <!--Grid column-->
-                          </div>
-                          <!--Grid row-->
-                        </div>
-                        <!-- Content -->
-                      </div>
-                      <!-- Mask & flexbox options-->
-                  </div>
-                </div>
+            </div>
                 <!--Section: Cards-->
+                <main class="mt-5 ">
+                    <div class="container">
+                    <section class="page-section" id="experience">
+                    <h2 class="h1 text-center mb-5 wow fadeIn">Experience</h2>
+                    <div class="wow fadeIn">
+                        <!-- Example row of columns -->
+                        <h3 class="mb-3 font-weight-bold dark-grey-text">
+                            <strong>Business & Informations Systems Intern</strong>
+                        </h3>
+                        <p class="grey-text">W.L. Gore & Associates (June 2018 - Present)</p>
+                        <ul>
+                          <li>Designing and creating the front end of an Angular web application that displays the total cost of ownership for a baghouse</li>
+                          <li>Designing and creating the front end of an Angular we application that takes orders for custom filter bags</li>
+                          <li>Creating a SQLite database to store data about customers and filter bag orders using Node.js </li>
+                        </ul>
+                      </div>
+                       
+                    <!--Grid row-->
     
+                    <hr class="mb-5 wow fadeIn">
+                    <div class="wow fadeIn">
+                    <!-- Example row of columns -->
+                    <h3 class="mb-3 font-weight-bold dark-grey-text">
+                        <strong>Undergraduate Research Assistant</strong>
+                    </h3>
+                    <p class="grey-text">University of Delaware (September 2018 - May 2019)</p>
+                    <ul>
+                      <li>Researched into a recommendation system for Infrastructure-as-a-Service cloud users that recommends VM instance configurations and auto-scaling groups </li>
+                      <li>Performed Yahoo! Cloud Serving Benchmark (YCSB) test to measure elasticity performance on the Amazon Web Services cloud </li>
+                    </ul>
+                    </div>
+                    <hr class="mb-5 wow fadeIn">
+                    <div class="wow fadeIn">
+                    <h3 class="mb-3 font-weight-bold dark-grey-text">
+                        <strong>Treasurer</strong>
+                    </h3>
+                    <p class="grey-text">Gamma Sigma Sigma National Service Sorority (June 2018 - January 2019 as treasurer, September 2017 - present as a member)</p>
+                    <ul>
+                      <li>Managed budgets of the executive board </li>
+                      <li>Paid dues to the national board </li>
+                      <li>Handled deposits and reimbursements for over 200 members</li>
+                      <li>Volunteered 25 hours a semester on various service projects like the soup kitchen, adopt-a-highway, and fundraising</li>
+                    </ul>
+                  </div>
+
+                    <!--Grid row-->
+                </section>
+                </div>
+                </main>
+
+                
             
         <!--Main layout-->
-    
         <!--Footer-->
-        <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+        <footer class="page-footer text-center font-small mt-4 wow fadeIn">
   
     
             <!--Copyright-->
-            <div class="footer-copyright py-3">
+            <div style="color:white" class="footer-copyright py-3">
                 © 2019 Copyright: Me, Myself, and I 
+                <br>
+                csconroy@udel.edu 
+                
             </div>
             <!--/.Copyright-->
     
