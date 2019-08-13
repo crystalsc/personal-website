@@ -3,6 +3,14 @@ body,
 header,
 .view {
   height: 100%;
+  color: whitesmoke;
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+hr {
+  border-color: #e47676;
 }
 
 @media (max-width: 740px) {
@@ -15,7 +23,7 @@ header,
 }
 
 .top-nav-collapse {
-  background-color: rgb(63, 22, 128) !important;
+  background-color:  #0f0c29 !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -24,7 +32,7 @@ header,
 
 @media (max-width: 991px) {
   .navbar:not(.top-nav-collapse) {
-    background: rgb(63, 22, 128) !important;
+    background: #0f0c29 !important;
   }
 }
 
@@ -42,9 +50,12 @@ h5 {
 }
 
 .navbar.scrolled {
-  background-color: rgb(63, 22, 128) !important;
+  background-color:  #0f0c29 !important;
   transition: background-color 200ms linear;
 }
 footer{
-  background-color: rgb(63, 22, 128) !important;
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
